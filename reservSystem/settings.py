@@ -19,10 +19,7 @@ from envyaml import EnvYAML
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Wczytaj zmienne srodowiskowe
-env = EnvYAML('env.yaml')
-
-# Ścieżka do pliku YAML
-CONFIG_PATH = os.path.join(BASE_DIR, 'config.yaml')
+env = EnvYAML('env.yaml', strict=False)
 
 
 # Quick-start development settings - unsuitable for production
@@ -47,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'calender',
     'rest_framework',
     'corsheaders',
 ]
