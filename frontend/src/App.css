@@ -1,0 +1,89 @@
+/* App.css */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 45, 85, 0.8), rgba(0, 172, 255, 0.8)); /* Nowoczesny gradient */
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem; /* Zwiększamy wielkość nagłówka */
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff2d55, #00acff); /* Gradientowy tekst */
+  -webkit-background-clip: text; /* Wypełnienie tekstu gradientem */
+  color: transparent; /* Przezroczysty kolor, by gradient był widoczny */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Cieniowanie */
+  margin-bottom: 60px; /* Większa przestrzeń na dole */
+  letter-spacing: 4px; /* Dodanie przestrzeni między literami */
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #00acff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #ff2d55;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7); /* Przezroczyste tło formularza */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px; /* Ograniczamy szerokość formularza */
+  margin-top: 20px; /* Przesuwamy formularz w dół */
+}
+
+h2 {
+  color: #ff2d55;
+  margin-bottom: 25px; /* Większa przestrzeń między tytułem a formularzem */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Większa przestrzeń między polami */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.2rem; /* Zwiększamy rozmiar czcionki */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #00acff;
+}
+
+a {
+  color: #ff2d55;
+  text-decoration: none;
+  font-size: 1.2rem; /* Większy rozmiar czcionki dla linku */
+  margin-top: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
