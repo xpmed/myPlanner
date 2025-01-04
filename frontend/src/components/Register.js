@@ -25,7 +25,7 @@ const Register = ({ toggleForm }) => {
       setUsername('');
       setEmail('');
       setPassword('');
-      toggleForm(); // Przełączamy na formularz logowania po udanej rejestracji
+      toggleForm();
     } else {
       setError('Błąd rejestracji');
     }

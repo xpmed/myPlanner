@@ -1,0 +1,100 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.half-width {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.half-width input,
+.half-width select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input[name="address"] {
+  width: 100%;
+}
+
+form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form textarea,
+form select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 12px;
+  background-color: #ff2d55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff4d75;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.email-newsletter {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+form input[type="email"] {
+  width: 48%;
+}
+
+.newsletter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.newsletter-checkbox input[type="checkbox"] {
+  margin: 0;
+}
+
+.newsletter-checkbox span {
+  font-size: 1rem;
+  color: #333;
+}

@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.models import User
+from .models import CustomUser
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.decorators import api_view
 from django.contrib.auth import authenticate
@@ -16,10 +17,10 @@ def register_user(request):
         password = request.data.get('password')
         email = request.data.get('email')
         
-        if User.objects.filter(username=username).exists():
+        if CustomUser.objects.filter(username=username).exists():
             return Response({'detail': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
 
-        user = User.objects.create_user(username=username, email=email, password=password)
+        user = CustomUser.objects.create_user(username=username, email=email, password=password)
         
         return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
 

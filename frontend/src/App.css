@@ -1,10 +1,9 @@
-/* App.css */
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(255, 45, 85, 0.8), rgba(0, 172, 255, 0.8)); /* Nowoczesny gradient */
+  background: linear-gradient(135deg, rgba(255, 45, 85, 0.8), rgba(0, 172, 255, 0.8));
   flex-direction: column;
   font-family: 'Arial', sans-serif;
   color: white;
@@ -13,20 +12,20 @@
 }
 
 h1 {
-  font-size: 4rem; /* Zwiększamy wielkość nagłówka */
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: linear-gradient(to right, #ff2d55, #00acff); /* Gradientowy tekst */
-  -webkit-background-clip: text; /* Wypełnienie tekstu gradientem */
-  color: transparent; /* Przezroczysty kolor, by gradient był widoczny */
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Cieniowanie */
-  margin-bottom: 60px; /* Większa przestrzeń na dole */
-  letter-spacing: 4px; /* Dodanie przestrzeni między literami */
+  background: linear-gradient(to right, #ff2d55, #00acff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+  letter-spacing: 4px;
 }
 
 button {
   padding: 12px 30px;
-  background-color: #00acff;
+  background-color: #ff2d55;
   color: white;
   border: none;
   border-radius: 8px;
@@ -35,28 +34,28 @@ button {
 }
 
 button:hover {
-  background-color: #ff2d55;
+  background-color: #d02447;
 }
 
-.container {
-  background-color: rgba(0, 0, 0, 0.7); /* Przezroczyste tło formularza */
+.container-login {
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 50px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
   width: 100%;
-  max-width: 400px; /* Ograniczamy szerokość formularza */
-  margin-top: 20px; /* Przesuwamy formularz w dół */
+  max-width: 400px;
+  margin-top: 20px;
 }
 
 h2 {
   color: #ff2d55;
-  margin-bottom: 25px; /* Większa przestrzeń między tytułem a formularzem */
+  margin-bottom: 25px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Większa przestrzeń między polami */
+  gap: 20px;
 }
 
 input[type="text"],
@@ -64,10 +63,10 @@ input[type="password"],
 input[type="email"] {
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #fff;
+  border: 1px solid black;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  font-size: 1.2rem; /* Zwiększamy rozmiar czcionki */
+  color: black;
+  font-size: 1.2rem;
 }
 
 input[type="text"]:focus,
@@ -80,10 +79,88 @@ input[type="email"]:focus {
 a {
   color: #ff2d55;
   text-decoration: none;
-  font-size: 1.2rem; /* Większy rozmiar czcionki dla linku */
+  font-size: 1.2rem;
   margin-top: 15px;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.city-header {
+  color: black;
+}
+
+.weather-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  color: black;
+}
+
+.city-search {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.city-search::placeholder {
+  color: black;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.icon-temp img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.forecast-day {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.forecast-day .date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.forecast-day .icon-temp img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day .des-wind p {
+  margin: 5px 0;
+}
+
+.forecast-day .deg {
+  font-size: 12px;
+}
+
+.read-more {
+  color: #ff2d55;
 }
