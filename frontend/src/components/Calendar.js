@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Calendar.css';
+import CalendarDays from './CalendarDays';  // Importujemy komponent CalendarDays
 
 const CalendarView = ({ activities, addActivity }) => {
   const [date, setDate] = useState(new Date());
@@ -11,25 +12,6 @@ const CalendarView = ({ activities, addActivity }) => {
     "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
     
   const weekDays = ["Pon", "Wt", "Śr", "Czw", "Pt", "Sob", "Ndz"];
-
-  const getDaysInMonth = (month, year) => {
-    return new Date(year, month + 1, 0).getDate();
-  };
-
-  const generateCalendar = () => {
-    const daysInMonth = getDaysInMonth(date.getMonth(), date.getFullYear());
-    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-    
-    let daysArray = Array(daysInMonth).fill(null).map((_, idx) => idx + 1);
-    const emptyDays = Array(firstDay === 0 ? 6 : firstDay - 1).fill(null);
-
-    return [...emptyDays, ...daysArray];
-  };
-
-  const renderActivities = (day) => {
-    const dayKey = new Date(date.getFullYear(), date.getMonth(), day).toISOString().split('T')[0];
-    return activities[dayKey] ? activities[dayKey].map((act, idx) => <li key={idx}>{act}</li>) : null;
-  };
 
   const handleDayClick = (day) => {
     const dayKey = new Date(date.getFullYear(), date.getMonth(), day).toISOString().split('T')[0];
@@ -83,24 +65,11 @@ const CalendarView = ({ activities, addActivity }) => {
         ))}
       </div>
 
-      <div className="calendar">
-        {generateCalendar().map((day, idx) => (
-          day ? (
-            <div
-              key={idx}
-              className="calendar-day"
-              onClick={() => handleDayClick(day)}
-            >
-              <div className="day-number">{day}</div>
-              <ul className="activities">
-                {renderActivities(day)}
-              </ul>
-            </div>
-          ) : (
-            <div key={idx} className="empty-day"></div>
-          )
-        ))}
-      </div>
+      <CalendarDays 
+        date={date} 
+        activities={activities} 
+        handleDayClick={handleDayClick} 
+      />
 
       {isModalOpen && (
         <div className="modal-overlay">
